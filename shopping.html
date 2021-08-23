@@ -9,11 +9,12 @@
     *{
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
     body{
       font-family: sans-serif;
       line-height: 1.4;
-      box-sizing: border-box;
+      
     }
     article{
       width: 825px;
@@ -45,7 +46,7 @@
     .price{
       font-size: 24px;
     }
-    p.ship{
+    .ship{
       font-size: 12px;
       text-transform: uppercase;
       font-weight: bold;
@@ -58,7 +59,6 @@
       margin-bottom: 15px;
     }
     a:hover, a:active{
-      color: black;
       text-decoration: none;
     }
     .colors{
@@ -107,40 +107,70 @@
       font-size: 20px;
       cursor: pointer;
       display: inline-block;
-      padding: 10px;
+      padding: 12px;
       width: 100%;
+      border-top: 4px solid #000;
     }
     button:hover{
       background: white;
       color: #000;
-      border-top: 4px solid #000;
+    }
+    /* **********FLOATS********** */
+    img{
+      float: left;
+      margin-right: 40px;
+    }
+    .middle{
+      width: 240px;
+      float: left;
+      margin-right: 40px;
+      padding-top: 10px;
+    }
+    .price{float: left;}
+    .ship{float: right; margin-top: 10px; margin-bottom: 10px;}
+    .description{clear: both; margin-bottom: 10px;}
+    .product{
+      width: 240px;
+      float: left;
+      padding-top: 10px;
+    }
+    h3{margin-top: 5px;}
+    .clearfix::after{
+      content: '';
+      display: block;
+      clear: both;
     }
   </style>
 </head>
 <body>
   <article>
     <h2>Converse Cguck Taylor All Star Low Top</h2>
-    <img src="challenges.jpg" alt="Converse Cguck Taylor All Star Shoe">
-    <p class="price"><strong>$65.00</strong></p>
-    <p class="ship">Free Shipping</p>
-    <p>Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
-    <a href="https://www.converse.com">More information &rarr;</a>
-    <div class="colors">
-      <div class="color"></div>
-      <div class="color color-blue"></div>
-      <div class="color color-red"></div>
-      <div class="color color-yellow"></div>
-      <div class="color color-green"></div>
-      <div class="color color-brown"></div>
+    <div class="clearfix">
+      <img src="challenges.jpg" alt="Converse Cguck Taylor All Star Shoe">
+      <div class="middle">
+        <p class="price"><strong>$65.00</strong></p>
+        <p class="ship">Free Shipping</p>
+        <p class="description">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
+        <a href="https://www.converse.com">More information &rarr;</a>
+        <div class="colors">
+          <div class="color"></div>
+          <div class="color color-blue"></div>
+          <div class="color color-red"></div>
+          <div class="color color-yellow"></div>
+          <div class="color color-green"></div>
+          <div class="color color-brown"></div>
+        </div>
+      </div>
+      <div class="product">
+        <h3>Product details</h3>
+        <ul>
+          <li>Lightweight, durable canvas sneaker</li>
+          <li>Lightly padded footbed for added comfort</li>
+          <li>Iconic Chuck Taylor ankle patch</li>
+        </ul>
+      </div>
     </div>
-    <h3>Product details</h3>
-    <ul>
-      <li>Lightweight, durable canvas sneaker</li>
-      <li>Lightly padded footbed for added comfort</li>
-      <li>Iconic Chuck Taylor ankle patch</li>
-    </ul>
     <button>Add to cart</button>
-
   </article>
 </body>
 </html>
