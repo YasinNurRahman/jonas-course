@@ -116,7 +116,7 @@
       color: #000;
     }
     /* **********FLOATS********** */
-    img{
+/*     img{
       float: left;
       margin-right: 40px;
     }
@@ -139,17 +139,47 @@
       content: '';
       display: block;
       clear: both;
+    } */
+    /* **********FLEX-BOX********** */
+    .main-container-flexbox{
+      display: flex;
+      gap: 40px;
+    }
+    .middle{
+      flex: 1;
+    }
+    .pricing-flexbox{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      justify-content: space-between;
+    }
+    .ship{
+      margin-bottom: 0;
+    }
+    .colors{
+      display: flex;
+      gap: 10px;
+    }
+    .color{
+      display: block;
+      margin-right: 0;
+    }
+    .product{
+      flex: 1;
     }
   </style>
 </head>
 <body>
   <article>
     <h2>Converse Cguck Taylor All Star Low Top</h2>
-    <div class="clearfix">
+    <div class="clearfix main-container-flexbox">
       <img src="challenges.jpg" alt="Converse Cguck Taylor All Star Shoe">
       <div class="middle">
-        <p class="price"><strong>$65.00</strong></p>
-        <p class="ship">Free Shipping</p>
+        <div class="pricing-flexbox">
+          <p class="price"><strong>$65.00</strong></p>
+          <p class="ship">Free Shipping</p>
+        </div>
         <p class="description">Ready to dress up or down, these classic canvas Chucks are an everyday wardrobe staple.</p>
         <a href="https://www.converse.com">More information &rarr;</a>
         <div class="colors">
