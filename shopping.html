@@ -61,11 +61,11 @@
     a:hover, a:active{
       text-decoration: none;
     }
-    .colors{
-      /* border: 1px solid #444;
+    /* .colors{
+      border: 1px solid #444;
       width: 80%;
-      height: 30px; */
-    }
+      height: 30px;
+    } */
     .color {
       background-color: #000;
       height: 22px;
@@ -141,7 +141,7 @@
       clear: both;
     } */
     /* **********FLEX-BOX********** */
-    .main-container-flexbox{
+    /* .main-container-flexbox{
       display: flex;
       gap: 40px;
     }
@@ -167,15 +167,42 @@
     }
     .product{
       flex: 1;
+    } */
+    /* **********GRID********** */
+    article{
+      display: grid;
+      grid-template-columns: 250px 1fr 1fr;
+      column-gap: 40px;
+    }
+    h2{grid-column: 1/-1;}
+      .pricing-flexbox{
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      justify-content: space-between;
+      }
+      .ship{
+        margin-bottom: 0;
+      }
+      .colors{
+        display: flex;
+        gap: 10px;
+      }
+      .color{
+        display: block;
+        margin-right: 0;
+      }
+    button{
+      grid-column: 1/-1;
     }
   </style>
 </head>
 <body>
   <article>
     <h2>Converse Cguck Taylor All Star Low Top</h2>
-    <div class="clearfix main-container-flexbox">
-      <img src="challenges.jpg" alt="Converse Cguck Taylor All Star Shoe">
-      <div class="middle">
+    <!-- <div class="clearfix main-container-flexbox"> -->
+    <img src="challenges.jpg" alt="Converse Cguck Taylor All Star Shoe">
+    <div class="middle">
         <div class="pricing-flexbox">
           <p class="price"><strong>$65.00</strong></p>
           <p class="ship">Free Shipping</p>
@@ -190,16 +217,16 @@
           <div class="color color-green"></div>
           <div class="color color-brown"></div>
         </div>
-      </div>
-      <div class="product">
+    </div>
+    <div class="product">
         <h3>Product details</h3>
         <ul>
           <li>Lightweight, durable canvas sneaker</li>
           <li>Lightly padded footbed for added comfort</li>
           <li>Iconic Chuck Taylor ankle patch</li>
         </ul>
-      </div>
     </div>
+    <!-- </div> -->
     <button>Add to cart</button>
   </article>
 </body>
